@@ -32,13 +32,13 @@ PROIECT(folder)
     {name:('name', 1), title:'NAME', val:1, text:(0, 10), tags:['program', 'python', 'project_1']},
     {name:('name', 2), title:'NAME', val:2, text:(10, 20), tags:['design', 'technical']},
       }`
-    -   `name = unic composit from: 
+    -   name = unic composit from: 
         a.  NAME (given by author)(can be more nodes with same NAME)
-        b.  a number, begining with 1 (unic number at the same NAME)`
-    -   `title = NAME given by author, the name of the node`
-    -   `val = indentation of the node: 1=Parent, 2=Child, 3=Child of Child, ...`
-    -   `text = from what index to what index is text taken from file "name.text"`
-    -   `tags = keywords for a quick search`
+        b.  a number, begining with 1 (unic number at the same NAME)
+    -   title = NAME given by author, the name of the node
+    -   val = indentation of the node: 1=Parent, 2=Child, 3=Child of Child, ...
+    -   text = from what index to what index is text taken from file "name.text"
+    -   tags = keywords for a quick search
 
 +   name.text     {ASCII content, text, (Unicode utf-8)} = a file
 
@@ -48,5 +48,10 @@ PROIECT(folder)
     Second line of text   
     Third line of text of second node
 
-+   name.fancy    {html, rtf = formating} = a file
++   name.fancy    {html, rtf = formating} = a file (or .metadata)
+
+    Example of .fancy file    
+    `<font color="red", size="10", face="Consolas">(10, 20)</font>`
+    `{\rtf1\ansi{\fonttbl\f0\fswiss Helvetica;}\f0\pard (10, 20) {\b bold} (21) text.\par}`
+    
 +   name(folder)  {Pictures, Music, Movie, etc. = files} = a Folder
