@@ -25,11 +25,13 @@ PROIECT(folder)
 
 ## DATA_BASE(folder)
 +   name.index    {Nodes, Childs, etc.}
+
     Example of .index file:
-    `
-    {
-    {name:('name', 1), title:'NAME', val:1, text:(0, 10), tags:['program', 'python', 'project_1']}
-    }
+    
+    -`{    
+    {name:('name', 1), title:'NAME', val:1, text:(0, 10), tags:['program', 'python', 'project_1']},
+    {name:('name', 2), title:'NAME', val:2, text:(10, 20), tags:['design', 'technical']},
+      }`
 +   name.text     {ASCII content, text, (Unicode utf-8)}
 +   name.fancy    {html, rtf = formating}
 +   name(folder)  {Pictures, Music, Movie, etc. = files}
