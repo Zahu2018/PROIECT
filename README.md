@@ -1,4 +1,5 @@
 # PROIECT
+## CONTENT AND DEFINITION
 The purpose of this PROJECT is to create some portable tools like:
   1. Notepad
   2. PIM
@@ -22,3 +23,13 @@ PROIECT(folder)
 +   DATA_BASE_BIBLE(folder)
 +   ...
 
+## DATA_BASE(folder)
++   name.index    {Nodes, Childs, etc.}
+    Example of .index file:
+    `
+    {
+    {name:('name', 1), title:'NAME', val:1, text:(0, 10), tags:['program', 'python', 'project_1']}
+    }
++   name.text     {ASCII content, text, (Unicode utf-8)}
++   name.fancy    {html, rtf = formating}
++   name(folder)  {Pictures, Music, Movie, etc. = files}
