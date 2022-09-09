@@ -1,0 +1,82 @@
+REGEX
+=====
+
+Characterset
+------------
+\  = make an exceptional char
+.  = any char except "\n"
+\w = char(a-z, A-Z, 0-9, _)
+\W = non word char
+\d = numbers (0-9)
+\D = non number
+\s = whitespace(\t, \n, \r)
+\S = non whitespace
+
+Anchors
+-------
+^  = match at the beginning of string
+$  = match at the end of a string
+\b = match word boundary
+\B = match non word boundary
+
+Greedy |               QUANTIFIRERS                | Lazy
+-----------------------------------------------------------
+?      | 0 or 1 (may be exist)                     | ??
++      | 1 or more                                 | +?
+*      | zero or more                              | *?
+{n}    | match preceding element exact number      | {n}?
+{n, }  | match preceding element at least n times  | {n, }?
+{, m}  | match preceding element to m times
+{n, m} | match preceding element from n to m times | {n, m}?
+
+Sets and ranges (in set there is no specia char)
+---------------
+[xyz]  = any of x, y, zero
+[a-z]  = range from a to zero
+^[xyz] = a any single element except x, y, zero
+^[a-z] = any single element
+
+Capturing group
+---------------
+(x)   = capture the x in the group
+(?P<name>x) = capture the x and asign it the name
+\N    = reference the capturing group #N
+\g<N> = reference the capturing group #N (alternative)
+
+Alteration
+----------
+x | y = x or y
+
+Look around
+-----------
+x(?=y)  = match x if it is followed by y
+x(?!y)  = match x if it is NOT followed by y
+(?<=y)x = match x if y is before x
+(?<!y)x = match x if y is not before x
+
+Regex function
+--------------
+findall(pattern, string, flags=0)   => list
+
+    import re
+    patern = r"\d\d(\d\d)"
+    text = "Toamna 1976 vara 2690"
+    x = re.findall(patern, text)
+    print(x)  # => ['76', '90']
+
+finditer(pattern, string, flags=0)  => iterator yielding 
+search()    => first match
+fullmatch() => object
+match()     => 
+sub(pattern, replacement, string, count=0, flags=0)
+split()     => split
+
+Regex flags
+----------------------------------------------------
+re.ASCII      | re.A | ?m  | Ascii and non-Unicode
+re.DEBUG      | N/A  | N/A | Show debug information
+re.IGNORECASE | re.I | ?i  | Insensitive search
+re.LOCALE     | re.L | ?L  | Non compatibil cu ASCII
+re.DOTALL     | re.S | ?s  | Include new line "\n"
+re.VERBOSE    | re.X | ?x  | Comments
+
