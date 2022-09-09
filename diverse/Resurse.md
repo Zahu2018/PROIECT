@@ -13,5 +13,5 @@ Ctrl+F -> `#pim` -> Find all in ...
 
 
 ### GitHub .dev
-github.dev -> push -> Ctrl+Enter => repository
+github.dev -> push -> Ctrl+Enter => repository    
 Description: from online gui (github.dev) send files and folders in Repository.
