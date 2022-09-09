@@ -6,10 +6,10 @@ RESOURCES
 +   [Online compiler: python, re](https://www.learnpython.org/en/Regular_Expressions)      
 +   [Theme editor](https://tmtheme-editor.herokuapp.com/#!/editor/theme/Monokai)        
 
-### RegularExpression for searching in tags   
+### Searching in tags   
 
 Ex program:   
-`# Tags = ['PIM', 'personal', 'informations', 'manager']`   
+Ctrl+F -> `#pim` -> Find all in ...  
 
 
 ### GitHub .dev
